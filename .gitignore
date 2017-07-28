@@ -1,0 +1,15 @@
+# files being edited
+*~
+# make and build files
+*.o
+*.orig
+*.h.gch
+Debug
+Release
+ipch
+x64
+*.VC.db
+*.VC.VC*.opendb
+.vs
+*.sdf
+*.v12.suo

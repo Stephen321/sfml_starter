@@ -1,0 +1,1 @@
+Base project with screens, sfml and loading capability with rapidjson.

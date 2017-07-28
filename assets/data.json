@@ -1,0 +1,8 @@
+{
+	"sprites": {
+		"sprite_folder_path" : "sprites/",
+		"hyperJumpIcon" : "hyperJumpIcon.png",
+		"smartBombIcon" : "smartBombIcon.png",
+		"hyperJumpIconBG" : "iconBG.png"
+	}
+}
