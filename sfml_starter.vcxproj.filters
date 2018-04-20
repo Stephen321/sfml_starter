@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\GameData.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SceneManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameOverScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MenuScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\jsonspriterfiledocumentwrapper.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\examplefilefactory.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\variable\variablecontainer.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\variable\variableinstancenameandidmap.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\variable\variable.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\timeline\variabletimelineinstance.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\timeline\timelinekey.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\timeline\triggertimelineinstance.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\timeline\timeline.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\timeline\timelineinstance.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\timeline\soundtimelineinstance.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\timeline\tagtimelineinstance.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\timeline\proxytimelinekey.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\timeinfo\timeinfo.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\timeinfo\quarticeasingcurve.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\timeinfo\quinticeasingcurve.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\timeinfo\lineareasingcurve.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\timeinfo\quadraticeasingcurve.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\timeinfo\instanteasingcurve.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\timeinfo\beziereasingcurve.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\timeinfo\cubiceasingcurve.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\timeinfo\easingcurveinterface.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\override\spriterfileelementwrapper.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\override\spriterfileattributewrapper.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\override\spriterfiledocumentwrapper.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\override\objectfactory.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\override\soundfile.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\override\soundobjectinforeference.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\override\filefactory.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\override\imagefile.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\override\atlasfile.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectref\transformprocessor.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectref\spriteref.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectref\spriterefinstance.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectref\objectref.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectref\objectrefinstance.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectref\entityref.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectref\entityrefinstance.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectref\boneref.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectref\bonerefinstance.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\triggerobjectinfo.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\universalobjectinterface.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\tagobjectinfo.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\tagobjectinforeference.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\stringvariableinfo.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\stringvariableinforeference.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\taglist.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\realvariableinfo.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\soundobjectinfo.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\spriteobjectinfo.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\pointinstanceinfo.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\pointobjectinfo.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\entityobjectinfo.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\eventobjectinfo.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\intvariableinfo.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\boxinstanceinfo.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\boxobjectinfo.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\angleinfo.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\boneinstanceinfo.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\boneobjectinfo.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\model\spritermodel.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\loading\spriterdocumentloader.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\loading\loader.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\loading\loadinghelpers.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\global\settings.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\file\file.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\file\filereference.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\entity\object.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\entity\entityinstance.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\entity\entityinstancedata.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\entity\entity.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\charactermap\charactermap.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\charactermap\charactermapinstruction.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\animation\mainlinekeyinstance.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\animation\mainlinekey.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\animation\animation.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\animation\animationinstance.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\sfmlsoundobjectinforeference.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\sfmlimagefile.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\sfmlpointinstanceinfo.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\sfmlsoundfile.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\sfmlboneinstanceinfo.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\sfmlboxinstanceinfo.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\sfmlatlasfile.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\jsonspriterfileelementwrapper.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\exampleobjectfactory.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\jsonspriterfileattributewrapper.cpp">
+      <Filter>src\spriterengine</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\GameData.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Helpers.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Screen.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SceneManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Constants.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Scene.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameScene.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MenuScene.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameOverScene.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Spriter.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{d11a23da-dced-4a5f-8c2a-e1c20ec9ac06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{b90bf02d-c663-4a39-9cdb-a595f999b7af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets">
+      <UniqueIdentifier>{bf707250-f302-4cf4-8ee7-2aa7d7dd5666}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\spriterengine">
+      <UniqueIdentifier>{c6e84c87-0458-4e48-b234-4d433d2a9443}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

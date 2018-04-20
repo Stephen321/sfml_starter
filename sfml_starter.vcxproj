@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B16F9A45-B3D4-425D-BF19-C39703D36941}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Lab3</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)dependencies\sfml\include;$(ProjectDir)dependencies\spriter;$(ProjectDir)dependencies\nlohmann</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)dependencies\sfml\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-audio-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo D|xcopy /E /Y "$(ProjectDir)assets" "$(TargetDir)assets"
+xcopy /Y "$(ProjectDir)dependencies\sfml\bin\*.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)dependencies\sfml\include;$(ProjectDir)\include;$(ProjectDir)\dependencies\rapidjson\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)dependencies\sfml\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo D|xcopy /E /Y "$(ProjectDir)assets" "$(TargetDir)assets"
+xcopy /Y "$(ProjectDir)dependencies\sfml\bin\*.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)dependencies\sfml\include;$(ProjectDir)dependencies\spriter;$(ProjectDir)dependencies\nlohmann;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)dependencies\sfml\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-system.lib;sfml-window.lib;sfml-audio.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo D|xcopy /E /Y "$(ProjectDir)assets" "$(TargetDir)assets"
+xcopy /Y "$(ProjectDir)dependencies\sfml\bin\*.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)dependencies\sfml\include;$(ProjectDir)\include;$(ProjectDir)\dependencies\rapidjson\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)dependencies\sfml\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo D|xcopy /E /Y "$(ProjectDir)assets" "$(TargetDir)assets"
+xcopy /Y "$(ProjectDir)dependencies\sfml\bin\*.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Constants.h" />
+    <ClInclude Include="include\GameData.h" />
+    <ClInclude Include="include\GameOverScene.h" />
+    <ClInclude Include="include\GameScene.h" />
+    <ClInclude Include="include\Helpers.h" />
+    <ClInclude Include="include\MenuScene.h" />
+    <ClInclude Include="include\Scene.h" />
+    <ClInclude Include="include\SceneManager.h" />
+    <ClInclude Include="include\Screen.h" />
+    <ClInclude Include="include\Spriter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dependencies\spriter\spriterengine\animation\animation.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\animation\animationinstance.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\animation\mainlinekey.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\animation\mainlinekeyinstance.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\charactermap\charactermap.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\charactermap\charactermapinstruction.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\entity\entity.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\entity\entityinstance.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\entity\entityinstancedata.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\entity\object.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\file\file.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\file\filereference.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\global\settings.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\loading\loader.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\loading\loadinghelpers.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\loading\spriterdocumentloader.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\model\spritermodel.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\angleinfo.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\boneinstanceinfo.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\boneobjectinfo.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\boxinstanceinfo.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\boxobjectinfo.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\entityobjectinfo.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\eventobjectinfo.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\intvariableinfo.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\pointinstanceinfo.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\pointobjectinfo.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\realvariableinfo.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\soundobjectinfo.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\spriteobjectinfo.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\stringvariableinfo.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\stringvariableinforeference.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\taglist.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\tagobjectinfo.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\tagobjectinforeference.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\triggerobjectinfo.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectinfo\universalobjectinterface.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectref\boneref.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectref\bonerefinstance.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectref\entityref.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectref\entityrefinstance.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectref\objectref.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectref\objectrefinstance.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectref\spriteref.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectref\spriterefinstance.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\objectref\transformprocessor.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\override\atlasfile.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\override\filefactory.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\override\imagefile.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\override\objectfactory.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\override\soundfile.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\override\soundobjectinforeference.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\override\spriterfileattributewrapper.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\override\spriterfiledocumentwrapper.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\override\spriterfileelementwrapper.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\timeinfo\beziereasingcurve.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\timeinfo\cubiceasingcurve.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\timeinfo\easingcurveinterface.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\timeinfo\instanteasingcurve.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\timeinfo\lineareasingcurve.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\timeinfo\quadraticeasingcurve.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\timeinfo\quarticeasingcurve.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\timeinfo\quinticeasingcurve.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\timeinfo\timeinfo.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\timeline\proxytimelinekey.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\timeline\soundtimelineinstance.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\timeline\tagtimelineinstance.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\timeline\timeline.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\timeline\timelineinstance.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\timeline\timelinekey.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\timeline\triggertimelineinstance.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\timeline\variabletimelineinstance.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\examplefilefactory.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\exampleobjectfactory.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\jsonspriterfileattributewrapper.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\jsonspriterfiledocumentwrapper.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\jsonspriterfileelementwrapper.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\sfmlatlasfile.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\sfmlboneinstanceinfo.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\sfmlboxinstanceinfo.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\sfmlimagefile.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\sfmlpointinstanceinfo.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\sfmlsoundfile.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\user_override\sfmlsoundobjectinforeference.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\variable\variable.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\variable\variablecontainer.cpp" />
+    <ClCompile Include="dependencies\spriter\spriterengine\variable\variableinstancenameandidmap.cpp" />
+    <ClCompile Include="src\GameScene.cpp" />
+    <ClCompile Include="src\main.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\GameData.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\GameOverScene.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\MenuScene.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\SceneManager.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
