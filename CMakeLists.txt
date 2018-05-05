@@ -58,8 +58,6 @@ target_link_libraries(${PROJECT_LIB} PUBLIC ${SPRITER_LIBRARY})
 target_link_libraries(${PROJECT_LIB} PUBLIC Catch)
 
 # link executable with project library
-# *todo: it seems like sfml_starter_lib and sfml_starter both compile the src files so its done twice. why? (possibly
-# because of add_library and add_executable both incling source files??)*
 add_executable(${PROJECT_NAME} ${SOURCE_MAIN})
 target_link_libraries(${PROJECT_NAME} PUBLIC ${PROJECT_LIB})
 
