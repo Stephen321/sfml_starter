@@ -1,8 +1,8 @@
 #pragma once
 
 #include <cassert>
-#include "SFML\Graphics.hpp"
-#include "SFML\Window.hpp"
+#include "SFML/Graphics.hpp"
+#include "SFML/Window.hpp"
 
 class Scene {
 public:

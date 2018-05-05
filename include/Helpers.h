@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include "SFML\Graphics.hpp"
+#include "SFML/Graphics.hpp"
 
 namespace Helpers {
 	//clamps a value between min and max-1

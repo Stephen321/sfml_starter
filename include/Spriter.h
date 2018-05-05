@@ -1,8 +1,7 @@
 #pragma once
 
-#include "spriterengine/spriterengine.h"
-#include "spriterengine/global/settings.h"
-#include "spriterengine/user_override/exampleobjectfactory.h"
-#include "spriterengine/user_override/examplefilefactory.h"
+#include "spriterengine.h"
 
 namespace se = SpriterEngine;
+
+// Add extensions to SpriterEngine here
