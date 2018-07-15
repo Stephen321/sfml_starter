@@ -42,19 +42,3 @@ void GameData::addTexture(const char * name, const char * path) {
     a->data.loadFromFile(path);
     assets[std::string(name)] = a;
 }
-
-void GameData::addModel(const char * name, const char * path, const std::vector<std::string>& entities) {
-    Asset<se::SpriterModel*>* a = new Asset<se::SpriterModel*>;
-    a->data = new se::SpriterModel(path, new se::ExampleFileFactory(window), new se::ExampleObjectFactory(window));
-    assets[std::string(name)] = a;
-
-    for (int i = 0; i < entities.size(); i++) {
-        Asset<se::EntityInstance*>* e = new Asset<se::EntityInstance*>;
-        e->data = a->data->getNewEntityInstance(entities[i]);
-        assets[entities[i]] = e;
-    }
-}
-
-void GameData::addEntity(const char * model, const char * name) {
-    //getAsset<SpriterEngine::SpriterModel>
-}

@@ -2,7 +2,6 @@
 
 #include <unordered_map>
 #include "SFML/Graphics/Texture.hpp"
-#include "Spriter.h"
 
 
 class GameData {

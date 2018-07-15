@@ -3,7 +3,6 @@
 #include "GameScene.h"
 #include "GameOverScene.h"
 #include "GameData.h"
-#include "Spriter.h"
 
 SceneManager::SceneManager()
 	: m_window(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, 32), TITLE)
@@ -16,12 +15,6 @@ SceneManager::SceneManager()
 	m_scenes.push_back(new GameOverScene(&m_window));
 	m_currentScene = m_scenes[0];
 	m_currentScene->start();
-
-
-	SpriterEngine::Settings::setErrorFunction(SpriterEngine::Settings::simpleError);
-
-	// load Spriter file into SpriterModel object using our custom factories
-	SpriterEngine::SpriterModel scmlModel("assets/animations/TestAnimation/test.scon", new SpriterEngine::ExampleFileFactory(&m_window), new SpriterEngine::ExampleObjectFactory(&m_window));
 
 }
 
