@@ -26,7 +26,7 @@ list(FILTER SOURCE_FILES EXCLUDE REGEX ".*${SOURCE_MAIN}$")
 
 set(JSON_INCLUDE_DIR "${DEPENDENCIES_DIR}/json")
 
-# since sfml 2.5 this method will no longer work https://en.sfml-dev.org/forums/index.php?topic=9774.0
+# since sfml 2.5 this method will no longer work https://en.sfml-dev.org/forums/index.php?topic=24070.0
 set(SFML_ROOT "${DEPENDENCIES_DIR}/sfml")
 
 # https://github.com/tcbrindle/sdl2-cmake-scripts
