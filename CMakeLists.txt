@@ -1,5 +1,4 @@
 # TODO: PUBLIC vs INTERFACE vs PRIVATE
-# NOTE: on windows, make sure SFML_ROOT env variable is set (if not using local dependencies folder!)
 # See: https://github.com/stephen321/sdl_starter
 
 
@@ -27,14 +26,13 @@ list(FILTER SOURCE_FILES EXCLUDE REGEX ".*${SOURCE_MAIN}$")
 set(JSON_INCLUDE_DIR "${DEPENDENCIES_DIR}/json")
 
 # since sfml 2.5 this method will no longer work https://en.sfml-dev.org/forums/index.php?topic=24070.0
-set(SFML_ROOT "${DEPENDENCIES_DIR}/sfml")
-
+# set(SFML_ROOT "${DEPENDENCIES_DIR}/sfml")
 # https://github.com/tcbrindle/sdl2-cmake-scripts
 # Added these find cmake scripts and update module path to include cmake directory which contains them.
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${${PROJECT_NAME}_SOURCE_DIR}/cmake")
+# set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${${PROJECT_NAME}_SOURCE_DIR}/cmake")
 #Find any version 2.X of SFML
 #See the FindSFML.cmake file for additional details and instructions
-find_package(SFML 2 REQUIRED network audio graphics window system)
+find_package(SFML 2.5 REQUIRED COMPONENTS network audio graphics window system)
 
 # create static library from SpriterEngine
 # https://stackoverflow.com/questions/17511496/how-to-create-a-shared-library-with-cmake
@@ -46,7 +44,7 @@ file(GLOB_RECURSE SPRITER_SOURCES  "${DEPENDENCIES_DIR}/spriter/*.cpp")
 add_library(${SPRITER_LIBRARY} ${SPRITER_HEADERS} ${SPRITER_SOURCES})
 target_include_directories(${SPRITER_LIBRARY} PUBLIC ${SPRITER_INCLUDE_DIR})
 target_include_directories(${SPRITER_LIBRARY} PUBLIC ${SFML_INCLUDE_DIR})
-target_link_libraries(${SPRITER_LIBRARY} PUBLIC ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
+target_link_libraries(${SPRITER_LIBRARY} PUBLIC sfml-network sfml-audio sfml-graphics sfml-window sfml-system)
 # set_target_properties(${SPRITER_LIBRARY} PROPERTIES PUBLIC_HEADER "${INCLUDE_DIR}/Spriter.h")
 
 # create static library from project files
